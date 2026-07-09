@@ -45,4 +45,8 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   }
+
+  "script":{
+    "start":"node dist/index.js"
+  }
 }
