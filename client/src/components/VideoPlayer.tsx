@@ -190,25 +190,6 @@ export function VideoPlayer({ item, seriesContext, onBack }: VideoPlayerProps) {
     resetControlsTimeout();
   };
 
-  const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const time = Number(e.target.value);
-    setCurrentTime(time);
-    if (videoRef.current) {
-      videoRef.current.currentTime = time;
-    }
-    resetControlsTimeout();
-  };
-
-  const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const vol = Number(e.target.value);
-    setVolume(vol);
-    setIsMuted(vol === 0);
-    if (videoRef.current) {
-      videoRef.current.volume = vol;
-      videoRef.current.muted = vol === 0;
-    }
-    resetControlsTimeout();
-  };
 
   const handleToggleMute = () => {
     const newMute = !isMuted;
