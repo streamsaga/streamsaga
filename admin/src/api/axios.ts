@@ -1,6 +1,8 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from 'axios';
 
-export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+axios.create({
+  baseURL: "https://your-backend.up.railway.app/api",
+});
 
 let accessToken: string | null = null;
 
